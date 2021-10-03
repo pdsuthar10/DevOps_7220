@@ -4,8 +4,9 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
-@app.route("/testAPI")
-def testAPI():
+@app.route("/")
+@app.route("/welcome")
+def welcome():
     return "Hello from Python Sentiment Analysis Flask App!"
 
 

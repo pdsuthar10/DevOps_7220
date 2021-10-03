@@ -1,0 +1,45 @@
+<div class="lyricsh">
+    <h2><b>Laaree Chootee</b></h2>
+</div>
+
+<img src="https://dailytimes.com.pk/assets/uploads/2018/03/23/thumbnail_call-goes-patriotic-2.jpg" alt=""><br />
+<b>Ek Chalis Ki last Local</b><br>
+
+<div class="content-text-inner"><p>woh kehte hain na, jo hota hai,<br>
+    achche ke liye hota hai, galat kehte hain...</p>
+    <p>kismat ka khel hai saara<br>
+    phirta tha main awara<br>
+    yeh kya se kya ho gaya,<br>
+    char din ki zindagani<br>
+    har pal ek nayi kahani<br>
+    kya tha main kya ban gaya,<br>
+    kya hua jo laree choote<br>
+    jeevan ki gadi looti<br>
+    khwab hai to mujhko na jaga,<br>
+    zindagi ek pal mein saari<br>
+    yun palat gayi humari<br>
+    jhoot hai to mujhko na bata!</p>
+    <p>mumbai,<br>
+    suna tha yahan aadmi puri zindagi apni kismat<br>
+    slow track se fast track main nikal deta hai,<br>
+    par dhai ghante main meri kismat aise slow<br>
+    track se fast track par aa jayegi,<br>
+    Ye maine kabhi socha nahi tha,<br>
+    Saaza maaza ban jayegi,<br>
+    Ye bhi kabhi socha nahi tha,<br>
+    last local kya chooti saala kismat patri par aa gayi!!!</p>
+    <p>karlo jo bhi karna hai<br>
+    hota hai jo hona hai<br>
+    guzra to pal yeh phir na ayega,<br>
+    kya bura hai kya bhala hai<br>
+    waqt hi shayad khuda hai<br>
+    ho jane do phir dekha jayega,<br>
+    kya hua jo laree choote<br>
+    jeevan ki gadi looti<br>
+    khwab hai to mujhko na jaga,<br>
+    Zindagi ek pal mein saari<br>
+    yun palat gayi hamari<br>
+    jhoot hai toh mujhko na bata!</p>
+    <p>woh kehte hain na, jo hota hai,<br>
+    achche ke liye hota hai, sehi kehte hain.</p>
+</div>

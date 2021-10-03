@@ -1,0 +1,23 @@
+<div class="lyricsh">
+    <h2><b>Lucky Ali - O Sanam</b></h2>
+</div>
+
+<img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/09/30/737854-luckyali-100118.jpg" alt=""><br />
+<b>"Lucky Ali"</b><br>
+
+<div class="content-text-inner"><p>Shaam Sawere teri yaadein aati hain<br />
+    Aake dil ko mere yu tadpati hain<br />
+    O Sanam Mohabbat ki kasam,</p>
+    <p>Milke bichad na to dastoor ho gaya<br />
+        Yadoon mein teri majboor hogaya<br />
+        O Sanam teri yadoon ki kasam</p>
+    <p>Samjhe zamaana ke dil he khilona<br />
+        Jaana hai ab kya hai dil ka lagana<br />
+        Nazroon se ab na  humko girana<br />
+        Mar bhi gaye toh bhul na jaana.</p>
+    <p>Ankhon mein bassee ho<br />
+        Par door ho kaheen<br />
+        Dil ke kareeb ho<br />
+        Yeh mujhko hai yakeen<br />
+        O Sanam tere pyar ki kasam.</p>
+</div>

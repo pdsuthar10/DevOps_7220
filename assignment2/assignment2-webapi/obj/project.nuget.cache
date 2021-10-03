@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "oYbIxp7l9h5PvR8NpLQn/O1sEBfprG5r+A9WuOl92iQ3kJb+61wy23sJhGOfnxgqu+Ppdeg/N8rQKm7BXCkXLQ==",
+  "success": true,
+  "projectFilePath": "/Users/priyamsuthar/Desktop/DevOps/lecture2/app/rockstar-webapi/rockstar-webapi.csproj",
+  "expectedPackageFiles": [
+    "/Users/priyamsuthar/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/priyamsuthar/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/priyamsuthar/.nuget/packages/swashbuckle.aspnetcore/5.6.3/swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "/Users/priyamsuthar/.nuget/packages/swashbuckle.aspnetcore.swagger/5.6.3/swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "/Users/priyamsuthar/.nuget/packages/swashbuckle.aspnetcore.swaggergen/5.6.3/swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "/Users/priyamsuthar/.nuget/packages/swashbuckle.aspnetcore.swaggerui/5.6.3/swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

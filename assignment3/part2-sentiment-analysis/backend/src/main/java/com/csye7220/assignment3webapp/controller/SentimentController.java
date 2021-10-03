@@ -27,7 +27,7 @@ public class SentimentController {
         return "Spring Boot Sentiment Analysis Web API";
     }
 
-    @GetMapping("/myname")
+    @GetMapping("/my-name")
     public String myName() {
         return "My Name is Priyam";
     }

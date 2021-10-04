@@ -3,13 +3,11 @@ package com.csye7220.assignment3webapp.controller;
 import com.csye7220.assignment3webapp.model.Sentence;
 import com.csye7220.assignment3webapp.model.Sentiment;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
+@CrossOrigin
 public class SentimentController {
     @Value("${assignment3webapp.logic.api}")
     private String logicApi;

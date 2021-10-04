@@ -1,4 +1,4 @@
-# Webapp Server for Sentiment Analysis UI
+# Webapp Server for Sentiment Analysis UI - Spring Boot
 
 This is a backend server built for serving requests to frontend for sentiment analysis. The logic layer is handled by a different server based on Flask.
 

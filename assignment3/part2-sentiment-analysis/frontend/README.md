@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# UI for Sentiment Analysis - React.js
+This contains the UI for webapp that can take any sentence and display the polarity by making requests to server that follows micro-services architecture.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

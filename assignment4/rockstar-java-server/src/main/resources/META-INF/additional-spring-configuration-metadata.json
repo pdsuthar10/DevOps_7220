@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "assignment3webapp.logic.api",
+      "type": "java.lang.String",
+      "description": "This is the URL to flask application that runs sentiment analysis."
+    }
+  ] }

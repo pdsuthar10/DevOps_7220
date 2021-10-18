@@ -1,7 +1,6 @@
-# Rockstar App UI (React)
+# Webapp Server for Sentiment Analysis UI - Spring Boot
 
-This project consists of the frontend part related to Rockstar application. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This is a backend server built for serving requests to frontend for sentiment analysis. The logic layer is handled by a different server based on Flask.
 
 ## Docker network
 
@@ -16,7 +15,7 @@ docker network create <YOUR_NETWORK_NAME>
 After you have pulled the image, you can use that image to run a container. Run the container with the following command:
 
 ```
-docker run --name react-ui --network <YOUR_NETWORK_NAME> --rm -p 3000:80 pdsuthar10/rockstar-react-ui
+docker run --name java-backend-server --network <YOUR_NETWORK_NAME> --rm -p 8080:8080 pdsuthar10/rockstar-java-server
 ```
 
 You can check if the container is running on the desired network by running the following command:
@@ -29,12 +28,14 @@ It will show the network information with all the containers running on it.
 
 ## Testing the application
 
-You can access the application by visiting : http://localhost:3000
-
 Make sure you have the following image containers running inorder to test this container:
-- [pdsuthar10/rockstar-dotnet-webapi](https://hub.docker.com/repository/docker/pdsuthar10/rockstar-dotnet-webapi)
-- [pdsuthar10/rockstar-dotnet-mvc](https://hub.docker.com/repository/docker/pdsuthar10/rockstar-dotnet-mvc)
-- [pdsuthar10/rockstar-java-server](https://hub.docker.com/repository/docker/pdsuthar10/rockstar-java-server)
 - [pdsuthar10/rockstar-python-logic](https://hub.docker.com/repository/docker/pdsuthar10/rockstar-python-logic)
 
-You should be able to call all different APIs by clicking on the buttons on HomePage.
+The server will run at http://localhost:8080.
+
+Following are the API endpoints: 
+- GET `/` - Home Page.
+- GET `/my-name` - Returns a string with my name
+- POST `/sentiment` - Expects a request body with sentence key. Requests Flask server to calculate the polarity and returns with JSON response.
+- GET `/health` - This will return a successful response if the application is running properly. This checks the health of the application
+- GET `/testComms` - This will make an API call to Python Server and return a response if Java server can talk successfully with Python server.

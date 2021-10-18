@@ -11,7 +11,7 @@ It is a good idea to use a network when you have multiple applications talking w
 docker network create <YOUR_NETWORK_NAME>
 ```
 
-## Run the container using the image pushed
+## Run the container
 
 After you have pulled the image, you can use that image to run a container. Run the container with the following command:
 
@@ -30,7 +30,7 @@ It will show the network information with all the containers running on it.
 ## Testing the application
 
 Make sure you have the following image containers running inorder to test this container:
-- pdsuthar10/rockstar-java-server
+- [pdsuthar10/rockstar-java-server](https://hub.docker.com/repository/docker/pdsuthar10/rockstar-java-server)
 
 The server will run at http://localhost:5002.
 

@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = mvc
-build_property.ProjectDir = /Users/priyamsuthar/Desktop/DevOps/lecture2/app/mvc/
+build_property.ProjectDir = /Users/priyamsuthar/Desktop/DevOps/DevOps_7220/assignment4/rockstar-dotnet-webmvc/

@@ -1,12 +1,33 @@
-# Getting Started with Create React App
+# Rockstar App UI (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project consists of the frontend part related to Rockstar application. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Clone the repository
+
+You can clone the repository by running:
+
+```
+git clone https://github.com/pdsuthar10/DevOps_7220.git
+```
+
+Move to the source directory for this app:
+```
+cd assignment4/rockstar-react-ui
+```
+
+## Install the required packages
+
+Run the following command to install all the required packages for React application:
+
+```
+npm install
+```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `yarn start`
+### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -14,12 +35,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `yarn test`
+### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+### `npm build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +50,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `npm eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -39,32 +60,53 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Login with Docker
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run the following to log in Docker with your credentials:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+docker login -u <YOUR_USERNAME> -p <YOUR_PASSWORD>
+```
 
-### Code Splitting
+## Docker network
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+It is a good idea to use a network when you have multiple applications talking with each other. We will attach all our microservices container to the same Docker network so that they can communicate with each other. Create a common network in docker if you have not created one, by running the following command:
 
-### Analyzing the Bundle Size
+```
+docker network create <YOUR_NETWORK_NAME>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+## How to Build Docker Image
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+In the Dockerfile, I build the react applciation and use that build for creating the image to upload on Docker. Create a react app build using: `npm build`
 
-### Advanced Configuration
+After this, we have our build ready to be used for creating Docker image. Build the docker image by running:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+docker build -t <YOUR_DOCKER_ID>/rockstar-react-ui
+```
 
-### Deployment
+## Push the image to Docker registry
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Now that we have our image built, push it to Docker registry by running: 
 
-### `yarn build` fails to minify
+```
+docker push <YOUR_DOCKER_ID>/rockstar-react-ui
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Run the container using the image pushed
+
+After we have pushed the image to docker registry, we can use that image to run a container. Run the container with the following command:
+
+```
+docker run --name react-ui --network <YOUR_NETWORK_NAME> --rm -p 3000:80 <YOUR_DOCKER_ID>/rockstar-react-ui
+```
+
+You can check if the container is running on the desired network by running the following command:
+
+```
+docker inspect <YOUR_NETWORK_NAME>
+```
+
+It will show the network information with all the containers running on it.

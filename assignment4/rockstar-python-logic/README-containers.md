@@ -32,6 +32,8 @@ It will show the network information with all the containers running on it.
 Make sure you have the following image containers running inorder to test this container:
 - pdsuthar10/rockstar-java-server
 
+The server will run at http://localhost:5002.
+
 Following are the API endpoints: 
 - GET `/`  && GET `/welcome`- Home Page.
 - POST `/analyse/sentiment` - Expects a request body with sentence key. Returns the calculated polarity.

@@ -1,0 +1,26 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: rockstar-react-ui 
+spec:
+  selector:
+    matchLabels:
+      app: rockstar-react-ui
+  replicas: 3 
+  minReadySeconds: 15 
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata: 
+      labels:
+        app: rockstar-react-ui
+    spec:
+      containers:
+        - image: pdsuthar10/rockstar-react-ui:minikube
+          imagePullPolicy: Always
+          name: rockstar-react-ui
+          ports:
+            - containerPort: 80

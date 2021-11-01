@@ -1,0 +1,26 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: rockstar-dotnet-webapi
+spec:
+  selector:
+    matchLabels:
+      app: rockstar-dotnet-webapi
+  replicas: 2 
+  minReadySeconds: 15 
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata: 
+      labels:
+        app: rockstar-dotnet-webapi
+    spec:
+      containers:
+        - image: pdsuthar10/rockstar-dotnet-webapi
+          imagePullPolicy: Always
+          name: rockstar-dotnet-webapi
+          ports:
+            - containerPort: 80

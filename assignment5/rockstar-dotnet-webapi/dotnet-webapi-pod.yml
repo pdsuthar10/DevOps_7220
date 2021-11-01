@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rockstar-dotnet-webapi
+  labels:
+    app: rockstar-dotnet-webapi
+spec:
+  containers:
+    - image: pdsuthar10/rockstar-dotnet-webapi
+      name: rockstar-dotnet-webapi
+      ports:
+        - containerPort: 80

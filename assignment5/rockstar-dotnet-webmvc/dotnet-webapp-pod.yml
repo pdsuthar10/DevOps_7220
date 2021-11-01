@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rockstar-dotnet-webmvc
+  labels:
+    app: rockstar-dotnet-webmvc
+spec:
+  containers:
+    - image: pdsuthar10/rockstar-dotnet-webmvc:minikube
+      name: rockstar-dotnet-webmvc
+      ports:
+        - containerPort: 80

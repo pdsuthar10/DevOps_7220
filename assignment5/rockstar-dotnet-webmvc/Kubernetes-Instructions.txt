@@ -1,0 +1,63 @@
+Make sure minikube is running.
+
+To start minikube: 
+minikube start
+
+
+
+RUN SINGLE POD
+
+To create a pod: 
+kubectl create -f dotnet-webapp-pod.yml
+
+To get pods:
+kubectl get pods
+
+Port Forwarding:
+kubectl port-forward rockstar-dotnet-webmvc 5000:80
+
+CHECK ON : http://127.0.0.1:5000/
+
+Delete Pod:
+kubectl delete pod rockstar-dotnet-webmvc
+
+
+
+
+RUN DEPLOYMENT
+
+To create a deployment: 
+kubectl create -f dotnet-webapp-deployment.yml
+
+To get pods:
+kubectl get pods
+
+To get deployment:
+kubectl get deployment
+
+
+
+
+RUN SERVICE
+
+To create a service: 
+kubectl create -f dotnet-webapp-service.yml
+
+To get service:
+kubectl get service
+
+To start service:
+minikube service rockstar-dotnet-webmvc-lb
+
+This will open dotnet webapp in a new window:
+
+Add query parameters to it :
+webapp=<url of java backend service>
+webapi=<url of dotnet webapi service>
+
+
+
+
+Finally, to delete deployment and service:
+kubectl delete deployment rockstar-dotnet-webmvc
+kubectl delete service rockstar-dotnet-webmvc-lb

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rockstar-python-logic
+  labels:
+    app: rockstar-python-logic
+spec:
+  containers:
+    - image: pdsuthar10/rockstar-python-logic
+      name: rockstar-python-logic
+      ports:
+        - containerPort: 5002

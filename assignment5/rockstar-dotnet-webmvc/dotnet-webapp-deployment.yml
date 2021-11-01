@@ -1,0 +1,26 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: rockstar-dotnet-webmvc
+spec:
+  selector:
+    matchLabels:
+      app: rockstar-dotnet-webmvc
+  replicas: 3 
+  minReadySeconds: 15 
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata: 
+      labels:
+        app: rockstar-dotnet-webmvc
+    spec:
+      containers:
+        - image: pdsuthar10/rockstar-dotnet-webmvc:minikube
+          imagePullPolicy: Always
+          name: rockstar-dotnet-webmvc
+          ports:
+            - containerPort: 80

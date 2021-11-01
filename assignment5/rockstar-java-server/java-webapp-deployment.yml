@@ -1,0 +1,29 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: rockstar-java-server
+spec:
+  selector:
+    matchLabels:
+      app: rockstar-java-server
+  replicas: 2
+  minReadySeconds: 15 
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1 
+  template:
+    metadata: 
+      labels:
+        app: rockstar-java-server
+    spec:
+      containers:
+        - image: pdsuthar10/rockstar-java-server:minikube
+          imagePullPolicy: Always
+          name: rockstar-java-server
+          env:
+            - name: SA_LOGIC_API_URL 
+              value: "http://rockstar-python-logic-lb" 
+          ports:
+            - containerPort: 8080

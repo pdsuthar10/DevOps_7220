@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rockstar-react-ui
+  labels:
+    app: rockstar-react-ui
+spec:
+  containers:
+    - image: pdsuthar10/rockstar-react-ui:minikube
+      name: rockstar-react-ui
+      ports:
+        - containerPort: 80

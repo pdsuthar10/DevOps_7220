@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rockstar-java-server
+  labels:
+    app: rockstar-java-server
+spec:
+  containers:
+    - image: pdsuthar10/rockstar-java-server:minikube
+      name: rockstar-java-server
+      env:
+            - name: SA_LOGIC_API_URL 
+              value: "http://rockstar-python-logic-lb"
+      ports:
+        - containerPort: 8080

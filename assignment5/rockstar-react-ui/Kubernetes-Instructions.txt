@@ -1,0 +1,63 @@
+Make sure minikube is running.
+
+To start minikube: 
+minikube start
+
+
+
+RUN SINGLE POD
+
+To create a pod: 
+kubectl create -f react-webapp-pod.yml
+
+To get pods:
+kubectl get pods
+
+Port Forwarding:
+kubectl port-forward rockstar-react-ui 3000:80
+
+CHECK ON : http://127.0.0.1:3000/
+
+Delete Pod:
+kubectl delete pod rockstar-react-ui
+
+
+
+
+RUN DEPLOYMENT
+
+To create a deployment: 
+kubectl create -f react-webapp-deployment.yml
+
+To get pods:
+kubectl get pods
+
+To get deployment:
+kubectl get deployment
+
+
+
+
+RUN LOADBALANCER SERVICE
+
+To create a service: 
+kubectl create -f react-webapp-service.yml
+
+To get service:
+kubectl get service
+
+To start service:
+minikube service rockstar-react-ui-lb
+
+This will open react webapp in a new window:
+
+Add query parameters to it :
+webapp=<url of java webapp service>
+webapi=<url of dotnet webapi service>
+
+
+
+
+Finally, to delete deployment and service:
+kubectl delete deployment rockstar-react-ui
+kubectl delete service rockstar-react-ui-lb

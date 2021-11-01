@@ -1,0 +1,57 @@
+Make sure minikube is running.
+
+To start minikube: 
+minikube start
+
+
+
+RUN SINGLE POD
+
+To create a pod: 
+kubectl create -f java-webapp-pod.yml
+
+To get pods:
+kubectl get pods
+
+Port Forwarding:
+kubectl port-forward rockstar-java-server 8080:8080
+
+CHECK ON : http://127.0.0.1:8080/health
+
+Delete Pod:
+kubectl delete pod rockstar-java-server
+
+
+
+
+RUN DEPLOYMENT
+
+To create a deployment: 
+kubectl create -f java-webapp-deployment.yml
+
+To get pods:
+kubectl get pods
+
+To get deployment:
+kubectl get deployment
+
+
+
+
+RUN SERVICE
+
+To create a service: 
+kubectl create -f java-webapp-service.yml
+
+To get service:
+kubectl get service
+
+To get url for the running app:
+minikube service rockstar-java-server-lb --url
+
+
+
+
+Finally, to delete deployment and service:
+kubectl delete deployment rockstar-java-server
+kubectl delete service rockstar-java-server-lb
